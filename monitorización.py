@@ -110,9 +110,9 @@ def imprimir_datos():
 if __name__ == "__main__":
     imprimir_datos()
 
-cron = CronTab(user=True)  # Crea un crontab per l'usuari actual
+cron = CronTab(user=True)  # Crea un crontab para el usuario actual
 job = cron.new(command='python3 /home/isard/scripting/monitorización.py', comment='Monitor monitorización.py')
-job.minute.every(5)  # Programa l'script cada 5 minuts
+job.minute.every(5)  # Programa el script cada 5 minutos
 
-cron.write()  # Desa la configuració
+cron.write()  # Guarda la configuración 
 print("Tasca programada!")
