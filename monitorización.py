@@ -111,7 +111,7 @@ if __name__ == "__main__":
     imprimir_datos()
 
 cron = CronTab(user=True)  # Crea un crontab per l'usuari actual
-job = cron.new(command='python3 /ruta/completa/a/Script.py', comment='Monitor Script.py')
+job = cron.new(command='python3 /home/isard/scripting/monitorización.py', comment='Monitor monitorización.py')
 job.minute.every(5)  # Programa l'script cada 5 minuts
 
 cron.write()  # Desa la configuració
